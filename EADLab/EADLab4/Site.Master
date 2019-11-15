@@ -52,12 +52,14 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/"><span class="glyphicon glyphicon-home"></span>Home</a></li>
-                        <li><a runat="server" href="~/"><span class="glyphicon glyphicon-user"></span>Personal Banking</a></li>
+                        <li><a runat="server" href="~/RetrieveCustomer"><span class="glyphicon glyphicon-user"></span>Personal Banking</a></li>
 			            <li><a runat="server" href="~"><span class="glyphicon glyphicon-briefcase"></span>Corporate Banking </a></li>
 			            <li><a runat="server" href="~/Enquiry"><span class="glyphicon glyphicon-earphone"></span>Enquiry</a></li>
+                        <!--
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li><a runat="server" href="~/Test">Test</a></li><!--  -->
+                        <li><a runat="server" href="~/Test">Test</a></li>
+                        -->
                     </ul>
                 </div>
             </div>

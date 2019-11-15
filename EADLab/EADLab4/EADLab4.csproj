@@ -107,6 +107,11 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Acknowledge.aspx" />
+    <Content Include="AddTermDeposit.aspx" />
+    <Content Include="App_Data\BankApp.mdf" />
+    <Content Include="App_Data\BankApp_log.ldf">
+      <DependentUpon>BankApp.mdf</DependentUpon>
+    </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -127,6 +132,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="RetrieveCustomer.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -168,6 +174,13 @@
     <Compile Include="Acknowledge.aspx.designer.cs">
       <DependentUpon>Acknowledge.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddTermDeposit.aspx.cs">
+      <DependentUpon>AddTermDeposit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddTermDeposit.aspx.designer.cs">
+      <DependentUpon>AddTermDeposit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -177,6 +190,9 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BLL\CustomerBLL.cs" />
+    <Compile Include="BLL\TDMasterBLL.cs" />
+    <Compile Include="BLL\TDRateBLL.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -184,6 +200,9 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DAL\CustomerDAL.cs" />
+    <Compile Include="DAL\TDMasterDAL.cs" />
+    <Compile Include="DAL\TDRateDAL.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,7 +220,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\TDMaster.cs" />
+    <Compile Include="Models\TDRate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RetrieveCustomer.aspx.cs">
+      <DependentUpon>RetrieveCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RetrieveCustomer.aspx.designer.cs">
+      <DependentUpon>RetrieveCustomer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -217,9 +246,7 @@
       <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
